@@ -47,7 +47,7 @@ export default function GoogleSignUp() {
     useEffect(() => {
         /* global google */
         google.accounts.id.initialize({
-            client_id: "996401953184-9vvhl0ma5mpqdhl69squ1l2t2enlg56j.apps.googleusercontent.com",
+            client_id: CLIENT_ID,
             callback: handleCallbackResponse
         });
 
