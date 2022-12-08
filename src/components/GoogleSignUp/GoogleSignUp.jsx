@@ -47,7 +47,7 @@ export default function GoogleSignUp() {
     useEffect(() => {
         /* global google */
         google.accounts.id.initialize({
-            client_id: REACT_APP_GOOGLE_CLIENT_ID,
+            client_id: CLIENT_ID,
             callback: handleCallbackResponse
         });
 
