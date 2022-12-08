@@ -1,0 +1,41 @@
+.cities {
+    min-height: 82vh;
+}
+.search{
+    width: 300px;
+    box-shadow: -5px 5px 10px black;
+    border-radius: 10px;
+    border: rgb(5, 5, 5) solid 3px;
+    transition: all 1s ease;
+    text-align: center;
+}
+.error{
+    height: 100vh;
+    background-color: transparent;
+}
+.search:hover{
+    transform: scale(1.05);
+    transition: all 1s ease;
+    border: rgb(5, 5, 5) solid 3px;
+}
+.citiesTitle{
+    font-weight: bold;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    background-color:transparent;
+    border-radius: 14px;
+    height: 80px;
+    transition: all 1s ease;
+}
+.citiesTitle:hover{
+    background-color: rgba(0, 0, 0, 0.745);
+    transition: all 1s ease;
+    color: white;
+}
+.loader{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
