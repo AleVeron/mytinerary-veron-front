@@ -1,9 +1,6 @@
 import axios from "axios";
-import { URL } from '../../consts/google';
-
-
 /* let urlHeroku = 'http://localhost:4000/' */
-let urlHeroku = URL
+let urlHeroku = 'https://mytinerary-veron-production.up.railway.app/'
 
 const commentariesActions = {
 
