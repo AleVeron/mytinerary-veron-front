@@ -30,7 +30,6 @@
     "reactstrap": "^9.1.5",
     "redux": "^4.2.0",
     "serve": "^13.0.4",
-    "sweetalert2": "^11.4.19",
     "swiper": "^8.2.2",
     "web-vitals": "^2.1.4"
   },
