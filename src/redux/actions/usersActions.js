@@ -76,7 +76,7 @@ const usersActions = {
   
   signOut: () => {
     return (dispatch, getState) => {
-      dispatch({ type: "SIGN_OUT" ,
+      dispatch({ type: "SIGN_OUT" , 
     });
     };
   },

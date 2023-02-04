@@ -3,7 +3,6 @@ import "./navBar.css";
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
 import usersActions from "../../redux/actions/usersActions";
-import { toast } from "react-toastify";
 import Swal from 'sweetalert2';
 
 
@@ -15,6 +14,7 @@ function NavBar() {
     
     const dispatch = useDispatch()
 
+    const refresh = () => window.location.reload(true)
 
     return (
         <>
@@ -54,6 +54,7 @@ function NavBar() {
                                             imageAlt: `${logIn?.user.fullName}`,
                                           })
                                         dispatch(usersActions.signOut())
+                                        refresh()
                                     }}
                                         className="dropLink dropdown-item text-center text-lg-start" to={"/"}>LogOut</Link>
 

@@ -3,7 +3,6 @@ import axios from 'axios';
 /* let urlHeroku = 'http://localhost:4000/' */
 let urlHeroku = 'https://mytinerary-veron-production.up.railway.app/'
 
-
 const activityActions = {
 
     getActivities: () => {
