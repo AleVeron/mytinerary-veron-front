@@ -11,6 +11,7 @@ import "./carousel.css";
 
 // import required modules
 import { Grid, Pagination, Autoplay, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 
 
@@ -53,7 +54,7 @@ function Carousel() {
             backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
           }}>
 
-            <h3 className="cityTitle fs-4">{city.name}</h3>
+            <Link to={`/city/${city._id}`} className="cityTitle fs-4 text-dark">{city.name}</Link>
 
           </SwiperSlide>
         ))}

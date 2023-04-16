@@ -40,9 +40,11 @@ function BasicExample({ props, comments, propId }) {
       commentId: event.target.id,   //tomo el id de donde se dispara el evento, al cual lo igualo al id del comentario
       comment: editComment,
     }
-    let change = await dispatch(commentariesActions.modifyComment(comment))
-    toast(change.data.message) 
-    setReload(!reload)
+    if(comment.comment != ""){
+      let change = await dispatch(commentariesActions.modifyComment(comment))
+      toast(change.data.message) 
+      setReload(!reload)
+    }
   }
 
   //Eliminar comentario
@@ -91,18 +93,18 @@ function BasicExample({ props, comments, propId }) {
               <div className="card-body text-center">
                 <h4 className="card-title mt-5 titleAcc">Latest Comments</h4>
               </div>
-              {comentaries?.map((item, index) =>
-
-
-                <div className="row d-flex justify-content-center mt-5 mb-5" key={item._id} >
+              {comentaries?.map((item, index) => 
+              {
+                return (
+                  <div className="row d-flex justify-content-center mt-5 mb-5" key={item._id} >
                   <div className="col-12 col-sm-10 ">
                     <div className="card bordes">
 
                       <div className="comment-widgets ">
                         <div className="d-flex flex-row comment-row m-t-0">
-                          <div className="p-2"><img src={item?.user.photoUser} alt="user" width="75" className="rounded-circle" /></div>
+                          <div className="p-2"><img src={item?.user?.photoUser} alt="user" width="75" className="rounded-circle" /></div>
                           <div className="comment-text w-100">
-                            <h6 className="font-medium">{item?.user.fullName.toUpperCase()}</h6>
+                            <h6 className="font-medium">{item?.user?.fullName?.toUpperCase()}</h6>
 
                             {userLogged && item?.user._id === logIn?.user.id ?  //Si el usuario esta conectado accede contentEditable sino no puede
 
@@ -137,6 +139,11 @@ function BasicExample({ props, comments, propId }) {
                     </div>
                   </div>
                 </div>
+                )
+              }
+
+
+                
 
               )}
 

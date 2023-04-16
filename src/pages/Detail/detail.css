@@ -11,6 +11,7 @@
 .accordion-button {
     background-color: transparent !important;
     color: white !important;
+    box-shadow: none !important;
 }
 
 .titleDetail {
