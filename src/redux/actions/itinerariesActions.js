@@ -1,6 +1,6 @@
 import axios from "axios";
 /* let urlHeroku = 'http://localhost:4000/' */
-let urlHeroku = 'https://mytinerary-veron-production.up.railway.app/'
+let urlHeroku = 'https://mytinerary-veron-lgh4-dev.fl0.io/'
 
 const itinerariesActions = {
 
